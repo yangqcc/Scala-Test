@@ -19,5 +19,6 @@ object FunctionCurrying {
     val str2: String = "Scala!"
 
     println(stract(str1)(str2))
+
   }
 }
