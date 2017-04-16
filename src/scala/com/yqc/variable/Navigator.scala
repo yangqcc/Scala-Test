@@ -2,18 +2,20 @@ package com.yqc.variable
 
 class Navigator {
 
-  private[bobsrocckets] class Navigator {
-    protected[navigation] def useStarChart() {}
+  private[variable] class InnerClass {
+    private[this] var speed = 200
+    protected[InnerClass] var name = "this is name"
 
-    class LegOfJourney {
+    private[variable] class LegOfJourney {
       private[Navigator] val distance = 100
+
+      def showName = {
+        println(name)
+      }
     }
 
-    private[this] var speed = 200
   }
 
 }
 
-object Vehicle {
-  private[launch] val guide = new Navigator
-}
+

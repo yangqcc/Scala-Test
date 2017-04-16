@@ -1,38 +1,41 @@
 package com.yqc.operator
 
-class Executive {
-  private[society] var workDetails = null
-  //      private[professionl] var friends: String = "my friends"
-  private[this] var secrets = null
-  private[Executive] var num: Int = 1
+/**
+  * 访问权限
+  */
+package society {
 
-  private[society] def help(another: Executive): Unit = {
-    println(another.workDetails)
-    //        println(another.friends);
-    //        println(another.secrets); //ERROR
-  }
-}
+  class Executive {
+    private[society] var workDetails: String = "this is workDetails"
+    private[Executive] var friends: String = "my friends"
+    private[society] var secrets: String = "this is secretes"
 
-class Child extends Executive {
-  override def help(another: Executive): Unit = {
-    super.help(another)
-    println("this is child class")
+    private[society] def help(another: Executive): Unit = {
+      println(another.workDetails)
+      println(another.friends);
+      //        println(another.secrets); //ERROR
+    }
   }
 
-  def childHelp: Unit = {
-    println(workDetails)
-    //        println(friends)
-  }
-}
+  class Child extends Executive {
+    override def help(another: Executive): Unit = {
+      super.help(another)
+      println("this is child class")
+    }
 
-class Fruit {
-  def help: Unit = {
-    println()
+    def childHelp: Unit = {
+      println(workDetails)
+      //      println(friends)   //ERROR
+    }
   }
-}
 
-object MyObject {
-  def main(args: Array[String]): Unit = {
-    new Child().help(new Executive())
+  object MyObject {
+    def main(args: Array[String]): Unit = {
+      new Child().help(new Executive())
+      new Executive().help(new Executive)
+      println(new Executive().workDetails)
+      println(new Executive().secrets)
+    }
   }
+
 }

@@ -1,4 +1,4 @@
-package com.yqc.function
+package com.yqc.variable
 
 /**
   * Created by yangqc on 2017/4/16.
