@@ -20,6 +20,7 @@ import com.yqc.classAndObject.Point
   * *
   * 构造器的顺序是类的线性化的反向。线性化是描述某个类型的所有超类型的一种技术规格
   */
+//TODO 特征构造顺序详解
 trait Equal {
 
   //该方法没有实现

@@ -4,6 +4,7 @@ package com.yqc.closure
   * Created by yangqc on 2017/4/16.
   * 函数闭包，scala这个闭包比java做得好多了
   */
+//TODO 闭包详解，和java以及javascript比较
 object ClosureTest {
   var factor = 3
 
