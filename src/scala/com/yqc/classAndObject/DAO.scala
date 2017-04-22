@@ -18,17 +18,36 @@ trait DAO {
     true
   }
 
-  def add(o: Any): Boolean
+  def add(o: Any): Boolean = {
+    println("this is add method!")
+    false
+  }
 
   def update(o: Any): Int
 
   def query(id: String): List[Any]
 }
 
+object testTrait {
+  def main(args: Array[String]): Unit = {
+    new DAO {
+      override def update(o: Any): Int = {
+        println("this is childClass,update method!")
+        1
+      }
+
+      override def query(id: String): List[Any] = {
+        println("this is childClass,query method!")
+        List(1, 2, 4)
+      }
+    }.update(12)
+  }
+}
+
 /**
   * 继承多个trait
   */
-class DaoImpl extends DAO with Cloneable {
+/*class DaoImpl extends DAO with Cloneable {
 
   override def delete(id: String): Boolean = true
 
@@ -37,4 +56,4 @@ class DaoImpl extends DAO with Cloneable {
   def update(o: Any): Int = 1
 
   def query(id: String): List[Any] = List(1, 2, 3)
-}
+}*/
