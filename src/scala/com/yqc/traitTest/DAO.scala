@@ -1,4 +1,4 @@
-package com.yqc.classAndObject
+package com.yqc.traitTest
 
 /**
   * Created by yangqc on 2017/4/22.

@@ -1,4 +1,4 @@
-package com.yqc.`trait`
+package com.yqc.traitTest
 
 import com.yqc.classAndObject.Point
 
