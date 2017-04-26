@@ -7,5 +7,4 @@
 .idea/
 Scala.iml
 out/
-src/java/resource/
-src/scala/resource/
+
