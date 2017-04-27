@@ -11,9 +11,10 @@ object PatternMatchingTest2 {
     //这边仅仅给出了匹配Student的情况，在编译时
     //编译器会提示
     //match may not be exhaustive. It would fail on the following inputs: Nobody(_), Teacher(_, _, _)
-
+    //TODO 密封模式，用超类
     s match {
-      case Student(name, _, _) => println(name)
+      case Teacher(name, _, _) => println(name)
+      case y => println(y)
     }
   }
 }
