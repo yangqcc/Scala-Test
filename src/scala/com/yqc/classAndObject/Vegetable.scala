@@ -37,6 +37,9 @@ object MyVegetable {
   }
 }
 
+/**
+  * 伴生类都是静态方法
+  */
 object Vegetable2 extends Vegetable {
 
   override var height: Int = 12
