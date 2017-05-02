@@ -25,7 +25,7 @@ object Greeter {
     case List() => throw new IllegalArgumentException("empty list")
     case List(x) => x
     case x :: rest =>
-      val maxRest = maxListImpParam(rest)(orderer)
+      val maxRest = maxListImpParam(rest)
       if (orderer(x) > maxRest) x
       else maxRest
   }
