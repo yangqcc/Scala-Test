@@ -1,4 +1,4 @@
-package com.yqc.genericAndAnnotation
+package com.yqc.implicitConversion
 
 /**
   * Created by yangqc on 2017/5/2.

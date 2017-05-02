@@ -1,4 +1,4 @@
-package com.yqc.genericAndAnnotation
+package com.yqc.implicitConversion
 
 /**
   * Created by yangqc on 2017/5/2.
@@ -18,9 +18,9 @@ object Rational {
 
 object converterOperator {
 
-  def main(args: Array[String]): Unit = {
+  import com.yqc.implicitConversion.Rational.int2Rational
 
-    import com.yqc.genericAndAnnotation.Rational.int2Rational
+  def main(args: Array[String]): Unit = {
 
     val x: Int = 19
     val y: Int = 10
