@@ -5,7 +5,7 @@ package com.yqc.collection
   *
   * scala数组有泛型
   */
-object ArrayTest {
+object ArrayTest1 {
 
   //数组也有泛型，真爽,全部初始化为0
   val numberArray = new Array[Int](10)

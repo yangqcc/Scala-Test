@@ -20,4 +20,9 @@ object ConverterPlace2 {
         if (x > maxVal) x
         else maxVal
     }
+
+  def main(args: Array[String]): Unit = {
+    val myList: List[Int] = List(1, 2, 3)
+    println(maxList(myList))
+  }
 }
