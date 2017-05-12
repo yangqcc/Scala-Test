@@ -14,8 +14,15 @@ class PersonOrdering extends Ordering[Person] {
   }
 }
 
-case class Person(val name: String) {
+class Person(val name: String) extends Ordering[Person] {
   println("正在构造对象:" + name)
+
+  override def compare(x: Person, y: Person): Int = {
+    if (x.name == y.name)
+      1
+    else
+      -1
+  }
 }
 
 object Person {
@@ -36,7 +43,7 @@ class Pair[T: Ordering](val first: T, val second: T) {
 object ContextBound {
   def main(args: Array[String]): Unit = {
     implicit val p1 = new PersonOrdering
-    val p = new Pair1[Person](Person("yangqc"), Person("超超"))
-    println(p.smaller())
+    val p = new Pair[Person](Person("yangqc"), Person("超超"))
+    println(p.smaller)
   }
 }
