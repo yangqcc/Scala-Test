@@ -28,3 +28,9 @@ object SingletonObject {
     println("a eq b : " + (a eq b))
   }
 }
+
+/*object OtherObject{
+  def main(args: Array[String]): Unit = {
+    println(new SingletonObject)
+  }
+}*/
