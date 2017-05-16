@@ -3,6 +3,7 @@ package com.yqc.controllerStatement
 /**
   * Created by yangqc on 2017/5/16.
   * Scala的if语句可以返回值
+  * Scala作者建议谨慎使用while循环以及var
   */
 object IfStatement {
 
