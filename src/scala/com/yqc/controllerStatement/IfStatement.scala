@@ -24,6 +24,15 @@ object IfStatement {
     b
   }
 
+  /**
+    * 最大公约数函数式风格
+    *
+    * @param x
+    * @param y
+    * @return
+    */
+  def gcd(x: Long, y: Long): Long = if (y == 0) x else gcd(y, x % y)
+
   var line = ""
   /**
     * 因为不能产生有实际意义的结果.结果类型是Unit.
