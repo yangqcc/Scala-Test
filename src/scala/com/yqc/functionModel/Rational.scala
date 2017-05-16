@@ -47,9 +47,6 @@ class Rational(n: Int, d: Int) {
 
   def *(that: Rational): Rational = toGcd(new Rational(number * that.number, denom * that.denom))
 
-  //隐式转换函数
-  implicit def intToRational(x: Int): Rational = new Rational(x)
-
   //判断是否小于传入的Rational
   def lessThan(that: Rational) = this.number * that.denom < this.number * this.denom
 
