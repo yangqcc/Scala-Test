@@ -34,6 +34,21 @@ object ForFilterStatement {
       if line.trim.matches(pattern)
     } println(file + ": " + line.trim)
 
+  /**
+    * 可以通过等号把结果绑定到新的变量实现.绑定的变量被当做val引入和使用
+    * 不过不用带关键字val,在表达式的流间赋值
+    *
+    * @param pattern
+    */
+  def grep2(pattern: String) =
+    for {
+      file <- filesHere
+      if file.getName.endsWith(".scala")
+      line <- fileLines(file)
+      trimmed = line.trim
+      if trimmed.matches(pattern)
+    } println(file + ": " + trimmed)
+
   def main(args: Array[String]): Unit = {
     showFilterName
     grep(".*gcd.*")
