@@ -19,7 +19,23 @@ object ForFilterStatement {
       println(file)
   }
 
+  def fileLines(file: java.io.File) = scala.io.Source.fromFile(file).getLines().toList
+
+  /**
+    * 嵌套枚举,使用花括号代替小括号,这样可以省略小括号是必须加上的分号
+    *
+    * @param pattern
+    */
+  def grep(pattern: String) =
+    for {
+      file <- filesHere
+      if file.getName.endsWith(".scala")
+      line <- fileLines(file)
+      if line.trim.matches(pattern)
+    } println(file + ": " + line.trim)
+
   def main(args: Array[String]): Unit = {
     showFilterName
+    grep(".*gcd.*")
   }
 }
