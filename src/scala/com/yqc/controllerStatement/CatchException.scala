@@ -41,6 +41,12 @@ object CatchException {
       case e: MalformedURLException => new URL("http://www.baidu.com")
     }
 
+  /**
+    * 下面两个函数的差别,所以使用finally语句最好不要返回值,
+    * 理解为确保某些操作的发生途径
+    *
+    * @return
+    */
   def f: Int = try {
     return 1
   } finally {
