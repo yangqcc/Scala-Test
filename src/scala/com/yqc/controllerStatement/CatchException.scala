@@ -1,9 +1,7 @@
 package com.yqc.controllerStatement
 
 import java.io.{FileNotFoundException, FileReader, IOException}
-import java.net.MalformedURLException
-
-import scala.sys.process.processInternal.URL
+import java.net.{MalformedURLException, URL}
 
 /**
   * Created by yangqc on 2017/5/17.
@@ -43,8 +41,22 @@ object CatchException {
       case e: MalformedURLException => new URL("http://www.baidu.com")
     }
 
+  def f: Int = try {
+    return 1
+  } finally {
+    return 2
+  }
+
+  def g: Int = try {
+    1
+  } finally {
+    2
+  }
+
   def main(args: Array[String]): Unit = {
-    println(CatchException(4).half)
-    println(CatchException(3).half)
+    /*  println(CatchException(4).half)
+      println(CatchException(3).half)*/
+    println(f)
+    println(g)
   }
 }
