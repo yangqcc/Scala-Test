@@ -19,4 +19,23 @@ object LongLines {
     if (line.length > width)
       println(fileName + ": " + line.trim)
   }
+
+  /**
+    * 函数内部再加入函数
+    *
+    * @param fileName
+    * @param width
+    */
+  def processFile2(fileName: String, width: Int): Unit = {
+
+    def processLine(line: String): Unit = {
+      if (line.length > width)
+        print(fileName + ":" + line)
+    }
+
+    val source = Source.fromFile(fileName)
+    for (line <- source.getLines()) {
+      processLine(line)
+    }
+  }
 }
