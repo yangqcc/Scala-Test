@@ -14,6 +14,7 @@ class CaseStatement(val firstArg: Array[String]) {
     case _ => "huh?"
   }
 
+  val two = (x: Int) => x;
 }
 
 object CaseStatement {
@@ -23,5 +24,6 @@ object CaseStatement {
   def main(args: Array[String]): Unit = {
     println(CaseStatement(Array[String]("yangqc", "shi")).friend)
     println(CaseStatement(Array[String]("salt", "chips", "eggs")).friend)
+    println(CaseStatement(Array[String]("ss")).two(12))
   }
 }
