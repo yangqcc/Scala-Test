@@ -16,6 +16,10 @@ object RepeatedParameter {
   def main(args: Array[String]): Unit = {
     echo("hello", " ", "scala", "!")
     val arr = Array("What's", "up", "doc?")
+    //    echo(arr)  //这句会报错,需要改成下面那句
+
+    //这里告诉编译器,把数组的每个元素当做参数
+    //TODO 数组每个元素当做你参数
     echo(arr: _*)
   }
 }
