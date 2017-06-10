@@ -23,7 +23,7 @@ object Animal {
 
   def main(args: Array[String]): Unit = {
     println(Animal.uniqueStudentNo())
-    val animal = new Animal("john", 29)
+    val animal = Animal("john", 29)
     //直接访问Animal中的私有成员
     println(animal.sex)
 

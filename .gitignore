@@ -10,3 +10,5 @@ out/
 
 src/java/resource/
 person.out
+project/
+target/
