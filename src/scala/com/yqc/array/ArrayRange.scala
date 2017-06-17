@@ -6,8 +6,8 @@ package com.yqc.array
   */
 object ArrayRange {
   def main(args: Array[String]): Unit = {
-    var myList1 = Array.range(10, 20, 2)
-    var myList2 = Array.range(10, 20)
+    val myList1 = Array.range(10, 20, 2)
+    val myList2 = Array.range(10, 20)
 
     for (x <- myList1) {
       println(x)

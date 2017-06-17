@@ -12,3 +12,4 @@ src/java/resource/
 person.out
 project/
 target/
+scala-test.iml
