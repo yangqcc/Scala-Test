@@ -26,4 +26,55 @@ abstract class Element {
     * @return
     */
   def width: Int = if (height == 0) 0 else contents(0).length
+
+  def above(that: Element): Element = new ArrayElement(this.contents ++ this.contents)
+
+  def beside(that: Element): Element = {
+    val contents = new Array[String](this.contents.length)
+    for (i <- 0 until this.contents.length) {
+      contents(i) = this.contents(i) + that.contents(i)
+    }
+    new ArrayElement(contents);
+  }
+
+  /**
+    * 和beside实现相同的功能
+    *
+    * @param that
+    * @return
+    */
+  def beside2(that: Element): Element = {
+    new ArrayElement(for ((line1, line2) <- this.contents zip that.contents) yield line1 + line2)
+  }
+
+  /**
+    * 真tm简洁
+    */
+  val tuples = Array(("12", "14"))
+
+  def multipleTuple: Array[String] = for ((line1, line2) <- tuples) yield line1 + line2
+
+  override def toString: String = contents mkString "\n"
+
+}
+
+object Element {
+
+  /**
+    * 工厂方法
+    *
+    * @param contents
+    * @return
+    */
+  def elem(contents: Array[String]): Element = new ArrayElement(contents)
+}
+
+object Test {
+  def main(args: Array[String]): Unit = {
+    for (line <- new Element {
+      override def contents: Array[String] = Array("12");
+    }.multipleTuple) {
+      print(line)
+    }
+  }
 }
