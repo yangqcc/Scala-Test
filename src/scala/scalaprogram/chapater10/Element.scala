@@ -47,6 +47,13 @@ abstract class Element {
     new ArrayElement(for ((line1, line2) <- this.contents zip that.contents) yield line1 + line2)
   }
 
+/*  def widen(w: Int): Element =
+    if (w <= width) this
+    else {
+      val left = elem(' ', (w - width) / 2, height)
+      var right = elem(' ', w - width - left.)
+    }*/
+
   /**
     * 真tm简洁
     */
@@ -67,6 +74,7 @@ object Element {
     * @return
     */
   def elem(contents: Array[String]): Element = new ArrayElement(contents)
+
 }
 
 object Test {

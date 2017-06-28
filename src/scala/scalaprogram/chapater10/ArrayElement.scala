@@ -17,6 +17,5 @@ class ArrayElement(conts: Array[String]) extends Element {
 
 object Test2 {
   def main(args: Array[String]): Unit = {
-    Element.
   }
 }

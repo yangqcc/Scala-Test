@@ -1,4 +1,4 @@
-package com.yqc.patternMatch
+package com.yqc.patternMatch.`sealed`
 
 /**
   * Created by yangqc on 2017/4/29.
