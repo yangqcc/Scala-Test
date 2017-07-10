@@ -2,6 +2,8 @@ package com.yqc.patternMatch
 
 /**
   * Created by yangqc on 2017/4/28.
+  *
+  * 变量匹配模式
   */
 object VariablePattern {
   def main(args: Array[String]): Unit = {

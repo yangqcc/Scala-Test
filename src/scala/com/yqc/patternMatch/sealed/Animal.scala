@@ -14,7 +14,7 @@ case class Cat(name: String, age: Int) extends Animal
 object testSealed {
   def main(args: Array[String]): Unit = {
 
-    var animal: Animal = Dog("guaiguai", 21)
+    val animal: Animal = Dog("guaiguai", 21)
 
     def showName(animal: Animal) = animal match {
       case Dog(name, age) => println(name)

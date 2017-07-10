@@ -16,7 +16,7 @@ object Rational {
   implicit def int2Rational[A <: Int](x: A): Rational[A] = new Rational[A](x)
 }
 
-object converterOperator {
+object ConverterOperator {
 
   import com.yqc.implicitConversion.Rational.int2Rational
 

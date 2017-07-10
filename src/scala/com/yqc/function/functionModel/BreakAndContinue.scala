@@ -1,4 +1,4 @@
-package com.yqc.functionModel
+package com.yqc.function.functionModel
 
 /**
   * Created by yangqc on 2017/5/18.
