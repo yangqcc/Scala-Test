@@ -8,14 +8,23 @@ class Animal {
 }
 
 class Dog extends Animal {
+
+  def showDogName = "this is dog!"
+
   override def toString(): String = "this is Dog!"
 }
 
 class Cat extends Dog {
+
+  def showCatName = "this is cat!"
+
   override def toString(): String = "this is Cat!"
 }
 
 class Pig extends Cat {
+
+  def showPigName = "this is pig!"
+
   override def toString(): String = "this is Pig!"
 }
 
@@ -38,12 +47,6 @@ class MyAnimal[+A] {
 object Test {
 
   def main(args: Array[String]): Unit = {
-    var outputChannel: OutputChannel[Dog] = new OutputChannel[Dog]
-    outputChannel = new OutputChannel[Animal]
-    outputChannel.write(new Cat)
 
-    var myAnimal: MyAnimal[Cat] = new MyAnimal[Cat]
-    myAnimal = new MyAnimal[Pig]
-    myAnimal.showName(new Animal)
   }
 }
