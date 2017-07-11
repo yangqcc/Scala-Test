@@ -1,11 +1,13 @@
 package com.yqc.controllerStatement
 
+import java.io.File
+
 /**
   * Created by yangqc on 2017/5/17.
   */
 object ForStatement2 {
 
-  val filesHere = (new java.io.File(".")).listFiles()
+  val filesHere: Array[File] = (new File(".")).listFiles()
 
   def fileLines(file: java.io.File) = scala.io.Source.fromFile(file).getLines().toList
 
@@ -17,7 +19,7 @@ object ForStatement2 {
     *
     * @return
     */
-  def scalaFiles =
+  def scalaFiles: Array[File] =
     for {
       file <- filesHere
       if file.getName.endsWith(".scala")

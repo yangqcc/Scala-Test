@@ -42,6 +42,8 @@ object Greeter {
 
 object TestImplicit {
 
+  import com.yqc.implicitConversion.implicittest.JoesPrefs._
+
   def main(args: Array[String]): Unit = {
     Greeter.greet("Bob")
   }

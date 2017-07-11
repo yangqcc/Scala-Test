@@ -17,6 +17,8 @@ object ImplicitValue {
 
 object TestImplicitValue {
 
+  import com.yqc.implicitConversion.implicittest.ImplicitValue._
+
   def main(args: Array[String]): Unit = {
     ImplicitValue().showInteger
   }

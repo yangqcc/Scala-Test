@@ -11,7 +11,9 @@ import java.io.File
   */
 object ImplicitFunction2 extends App {
 
-  var x: Int = 35
+  import com.yqc.implicitConversion.implicittest.ImplicitConversion._
+
+  var x: Int = 3.5
 
   val f = new File("C:\\Users\\yangqc\\IdeaProjects\\akka-test\\src\\main\\resource\\file.log").read
 }
