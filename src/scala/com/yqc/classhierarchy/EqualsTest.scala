@@ -9,6 +9,8 @@ package com.yqc.classhierarchy
   */
 object EqualsTest {
 
+  import reflect.runtime.currentMirror
+
   val s1: String = new String("abc")
   val s2: String = new String("abc")
   val s3: String = "abc"
@@ -16,14 +18,13 @@ object EqualsTest {
   /**
     * Nothing的一个用处是标明不正常终止
     *
-    * @param message
     * @return
     */
-  def error(message: String): Nothing = throw new RuntimeException(message)
+  def error: String => Nothing = (message: String) => throw new RuntimeException(message)
 
   def divide(x: Int, y: Int): Int =
     if (y != 0) x / y
-    else error("出错了!")
+    else error("出错了")
 
   def main(args: Array[String]): Unit = {
     println(s1 == s2)
@@ -31,6 +32,7 @@ object EqualsTest {
     println(s1 eq s2)
     println(s1 eq s3)
 
-    println(divide(1, 0))
+    //    println(divide(1, 0))
+    println(currentMirror.reflect(error("")))
   }
 }
