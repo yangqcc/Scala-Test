@@ -44,9 +44,11 @@ class MyAnimal[+A] {
   def showName[U >: A](x: U) = println(x)
 }
 
-object Test {
+class ChildMyAnimal[Dog] extends MyAnimal[Animal] {}
+
+object TestEqual {
 
   def main(args: Array[String]): Unit = {
-
+    new ChildMyAnimal[Dog].showName()
   }
 }
