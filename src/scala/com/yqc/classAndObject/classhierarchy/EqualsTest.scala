@@ -1,4 +1,4 @@
-package com.yqc.classhierarchy
+package com.yqc.classAndObject.classhierarchy
 
 /**
   * Created by yangqc on 2017/7/13.

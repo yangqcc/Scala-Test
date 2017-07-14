@@ -1,7 +1,7 @@
 /**
  * Created by yangqc on 2017/7/13.
  */
-package com.yqc.classhierarchy;
+package com.yqc.classAndObject.classhierarchy;
 /**
  * scala的类层级结构
  * <p>
