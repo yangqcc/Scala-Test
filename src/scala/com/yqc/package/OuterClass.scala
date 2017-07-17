@@ -1,4 +1,4 @@
-package com.yqc.packagetest
+package com.yqc.`package`
 
 /**
   * Created by yangqc on 2017/4/22.

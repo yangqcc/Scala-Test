@@ -16,7 +16,7 @@ abstract class Vegetable {
   }
 
   def this(height: Int) = {
-    this();
+    this()
     this.height = height
   }
 }

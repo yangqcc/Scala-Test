@@ -30,6 +30,7 @@ trait DAO {
 
 object testTrait {
   def main(args: Array[String]): Unit = {
+
     new DAO {
       override def update(o: Any): Int = {
         println("this is childClass,update method!")

@@ -1,4 +1,4 @@
-package com.yqc.tailrecursive
+package com.yqc.tailRecursive
 
 import scala.annotation.tailrec
 

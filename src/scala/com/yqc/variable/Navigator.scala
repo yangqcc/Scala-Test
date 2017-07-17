@@ -16,6 +16,18 @@ class Navigator {
 
   }
 
+  class NavigatorInnerClass(val name: String)
+
+}
+
+object Navigator {
+
+  def apply: Navigator = new Navigator()
+
+  def main(args: Array[String]): Unit = {
+    val navigator: Navigator = new Navigator()
+    val innerClass: navigator.NavigatorInnerClass = new navigator.NavigatorInnerClass("Nicholas")
+  }
 }
 
 

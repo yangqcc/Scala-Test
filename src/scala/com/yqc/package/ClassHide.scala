@@ -1,4 +1,4 @@
-package com.yqc.packagetest
+package com.yqc.`package`
 
 //HashMap便隐藏起来了
 import java.util.{HashMap => _}

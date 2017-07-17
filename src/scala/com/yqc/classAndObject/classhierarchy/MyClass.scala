@@ -1,10 +1,21 @@
 package com.yqc.classAndObject.classhierarchy
 
 /**
+  * 继承函数
+  *
   * Created by yangqc on 2017/7/14.
   */
 trait FunctionMy[-A, +B] extends (A => B) {
   def apply(v1: A): B
+}
+
+class FunctionChild extends FunctionMy[Any, Unit] {
+  override def apply(v1: Any): Unit = v1 match {
+    case _: Int => println("Int")
+    case _: Char => println("Char")
+    case _: String => println("String")
+    case _ => println("other")
+  }
 }
 
 class MyClass(val name: String)(val age: Int)(val address: FunctionMy[Int, AnyRef]) {
@@ -30,6 +41,7 @@ object MyClass {
       case _ => "nothing"
     }
 
+    val functionChild: FunctionMy[Any, Unit] = (x: Any) => println(x)
     val myFunction: FunctionMy[Int, AnyRef] = (age: Int) => new Animal("animal", age)
     val myClass = MyClass("期成")(32)(myFunction)
     println(myClass.address(12))
