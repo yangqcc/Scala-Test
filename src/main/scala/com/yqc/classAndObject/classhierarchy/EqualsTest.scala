@@ -9,8 +9,6 @@ package com.yqc.classAndObject.classhierarchy
   */
 object EqualsTest {
 
-  import reflect.runtime.currentMirror
-
   val s1: String = new String("abc")
   val s2: String = new String("abc")
   val s3: String = "abc"
@@ -33,6 +31,6 @@ object EqualsTest {
     println(s1 eq s3)
 
     //    println(divide(1, 0))
-    println(currentMirror.reflect(error("")))
+    //    println(currentMirror.reflect(error("")))
   }
 }

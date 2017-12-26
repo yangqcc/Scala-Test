@@ -5,7 +5,7 @@ package com.yqc.patternMatch
   *
   * 偏函数原理
   */
-package object casetest {
+object CaseTest {
   /**
     * 函数字面量就是匿名函数
     *

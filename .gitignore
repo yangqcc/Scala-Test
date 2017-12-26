@@ -3,12 +3,11 @@
 *.class
 *.log
 
-.gitignore
 .idea/
 Scala.iml
 out/
 
-src/java/resource/
+src/main/java/resource/
 person.out
 project/
 target/

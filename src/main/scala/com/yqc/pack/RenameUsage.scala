@@ -1,4 +1,4 @@
-package com.yqc.`package`
+package com.yqc.pack
 
 import java.util.{HashMap => JavaHashMap, Map => JavaMap}
 
