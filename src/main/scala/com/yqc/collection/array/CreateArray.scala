@@ -1,4 +1,4 @@
-package com.yqc.array
+package com.yqc.collection.array
 
 /**
   * Created by yangqc on 2017/4/16.
