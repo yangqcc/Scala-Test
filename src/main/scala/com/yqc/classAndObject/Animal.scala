@@ -7,7 +7,7 @@ package com.yqc.classAndObject
 class Animal(var name: String, var age: Int) {
   private var sex: Int = 0
 
-  def printCompanionObject() = println(Animal.animalNo)
+  def printCompanionObject = println(Animal.animalNo)
 }
 
 object Animal {
